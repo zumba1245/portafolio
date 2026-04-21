@@ -1,109 +1,210 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Portafolio - Andrea Zumba</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
-            margin: 0;
-        }
-        header {
-            text-align: center;
-            padding: 40px;
-            background: #1e293b;
-        }
-        h1 {
-            margin: 0;
-        }
-        section {
-            background: #1e293b;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        h2 {
-            color: #38bdf8;
-        }
-        a {
-            color: #38bdf8;
-            text-decoration: none;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrea Zumba | Portafolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0f172a;
+  --card:#1e293b;
+  --accent:#38bdf8;
+  --text:#e2e8f0;
+  --muted:#94a3b8;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:60px 20px;
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+header h1{
+  font-size:2.5rem;
+}
+
+header p{
+  color:var(--accent);
+}
+
+/* CONTAINER */
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+
+/* CARDS */
+.card{
+  background:var(--card);
+  padding:25px;
+  margin:20px 0;
+  border-radius:15px;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+h2{
+  color:var(--accent);
+  margin-bottom:10px;
+}
+
+/* LIST */
+ul{
+  padding-left:20px;
+}
+
+li{
+  margin-bottom:5px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+@media(max-width:768px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* LINK */
+a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  color:var(--muted);
+}
+</style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>Andrea Zumba</h1>
-    <p>Estudiante de Ingeniería de Software con IA</p>
+  <h1>Andrea Zumba</h1>
+  <p>Estudiante de Ingeniería de Software con IA</p>
 </header>
 
-<section>
+<div class="container">
+
+  <div class="card">
     <h2>Perfil</h2>
     <p>
-        Estudiante de Ingeniería de Software con IA en SENATI. Interesada en desarrollar soluciones eficientes, escalables y centradas en el usuario.
+      Estudiante de Ingeniería de Software con IA en SENATI. Interesada en desarrollar soluciones eficientes, escalables y centradas en el usuario.
     </p>
-</section>
+  </div>
 
-<section>
+  <div class="card">
     <h2>Sobre mí</h2>
     <p>
-        Me enfoco en el desarrollo de aplicaciones web y móviles, así como en el uso de inteligencia artificial para resolver problemas reales. Aplico buenas prácticas como código limpio, control de versiones y documentación.
+      Me enfoco en el desarrollo de aplicaciones web y móviles, así como en el uso de inteligencia artificial para resolver problemas reales. Aplico buenas prácticas como código limpio, control de versiones y documentación.
     </p>
-</section>
+  </div>
 
-<section>
+  <div class="card">
     <h2>Habilidades técnicas</h2>
+    <div class="grid">
+      <ul>
+        <li><b>Lenguajes:</b> Python, Java, JavaScript, Kotlin</li>
+        <li><b>Frontend:</b> HTML, CSS, React</li>
+        <li><b>Backend:</b> Node.js, PHP</li>
+      </ul>
+      <ul>
+        <li><b>Bases de datos:</b> MySQL, MongoDB, SQLite</li>
+        <li><b>IA:</b> Machine Learning, NLP</li>
+        <li><b>Mobile:</b> Android (Jetpack Compose)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Proyecto destacado</h2>
+    <h3>Moto Pilot 🏁</h3>
+    <p>
+      Aplicación Android profesional para conductores de mototaxi que permite gestionar ingresos, gastos y rendimiento diario mediante sincronización en la nube.
+    </p>
+
+    <p><b>Tecnologías:</b> Kotlin, Jetpack Compose, Firebase, Room Database</p>
+
+    <p><b>Aporte:</b></p>
     <ul>
-        <li>Lenguajes: Python, Java, JavaScript, Kotlin</li>
-        <li>Frontend: HTML, CSS, React</li>
-        <li>Backend: Node.js, PHP</li>
-        <li>Bases de datos: MySQL, MongoDB, SQLite</li>
-        <li>IA: Machine Learning, NLP</li>
-        <li>Mobile: Android (Jetpack Compose)</li>
+      <li>UI moderna con Material Design 3</li>
+      <li>Arquitectura limpia (Clean Architecture)</li>
+      <li>Integración con Firebase</li>
+      <li>Persistencia offline-first con Room</li>
     </ul>
-</section>
 
-<section>
-    <h2>Proyecto Destacado</h2>
-    <h3>Moto Pilot</h3>
-    <p>
-        Aplicación Android para conductores de mototaxi que permite gestionar ingresos y gastos con sincronización en la nube.
-    </p>
-    <p>
-        Tecnologías: Kotlin, Jetpack Compose, Firebase, Room Database
-    </p>
-    <p>
-        Rol: Desarrolladora principal
-    </p>
-    <a href="https://github.com/zumba1245/Motopilot" target="_blank">
-        Ver repositorio
-    </a>
-</section>
+    <p><b>Resultado:</b></p>
+    <ul>
+      <li>Control financiero eficiente</li>
+      <li>Sincronización en tiempo real</li>
+      <li>App escalable y segura</li>
+    </ul>
 
-<section>
+    <p>
+      <a href="https://github.com/zumba1245/Motopilot" target="_blank">
+        🔗 Ver repositorio
+      </a>
+    </p>
+  </div>
+
+  <div class="card">
     <h2>Experiencia</h2>
     <p><b>Poder Judicial</b></p>
     <ul>
-        <li>Instalación de equipos tecnológicos</li>
-        <li>Configuración de dispositivos</li>
-        <li>Pruebas para audiencias</li>
+      <li>Instalación de equipos tecnológicos</li>
+      <li>Configuración de dispositivos</li>
+      <li>Pruebas para audiencias</li>
     </ul>
-</section>
+  </div>
 
-<section>
+  <div class="card">
     <h2>Formación</h2>
     <p>Ingeniería de Software con IA — SENATI (2023 - Actualidad)</p>
-</section>
+  </div>
 
-<section>
+  <div class="card">
     <h2>Contacto</h2>
     <p>Email: zumbaandrea98@gmail.com</p>
     <p>GitHub: <a href="https://github.com/zumba1245">zumba1245</a></p>
-</section>
+    <p>Ubicación: Loreto, Perú</p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Andrea Zumba — Portafolio Profesional
+</footer>
 
 </body>
 </html>
